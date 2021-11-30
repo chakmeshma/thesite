@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fa" lang="fa" dir="rtl">
+<head>
+    <title>لیست نام‌ها</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        .names_container {
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .names_container > div {
+            border-bottom: 1px solid grey;
+            padding: 10px;
+            text-align: right;
+        }
+
+        .names_container:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<div class="names_container">
+    {% for name in names_list %}
+        <div>{{ name.first_name }} {{ name.last_name }}</div>
+    {% endfor %}
+</div>
+</body>
+</html>
